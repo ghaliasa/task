@@ -179,7 +179,8 @@ class _AddVehcileState extends State<AddVehcile> {
                   description: const Text("Success to add this vehcile"),
                   title: const Text("Success"),
                 ).show(context);
-                widget.vehciles.add(widget.vehcileModel);
+                widget.vehciles = List.from(widget.vehciles)
+                  ..add(widget.vehcileModel);
                 Get.to(Vehciles(
                   list: widget.vehciles,
                 ));
